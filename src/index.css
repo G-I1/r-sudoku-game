@@ -1,13 +1,150 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html{
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+:root{
+   --bgColor : rgb(100, 100, 100) ; 
+   --brdColor : hsl(0, 0%, 0%);
+   --accentColor : rgb(65, 105, 225);
+}
+
+body,
+#root,
+.App {
+  height: 100vh;
+  width: 100%;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bgColor);
+}
+
+.gameBoard {
+  padding: 10px;
+}
+
+h2{
+  color: rgb(215, 215, 215);
+}
+
+table{
+  border-collapse: collapse;
+  border: 4px solid var(--brdColor);
+  background-color: var(--accentColor);
+}
+
+td{
+  padding: 0;
+}
+
+.inputCase {
+  height: 50px;
+  width: 50px;
+  border: 2px solid var(--bgColor);
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: rgb(0, 0, 0);
+  outline-style: none;
+}
+
+.inputCase:focus {
+background-color: whitesmoke;
+}
+
+.emptyCase{
+  color: black;
+}
+
+.wrong{
+  background-color: rgb(255, 100, 100);
+}
+.correct{
+  background-color: rgb(27, 251, 27);
+}
+
+.bBorder{
+  border-bottom: 3px solid var(--brdColor);
+}
+.rBorder{
+  border-right: 3px solid var(--brdColor);
+}
+
+.controlMenu{
+  display: flex;
+  align-items: center;
+  height: 60px;
+  margin-top: 10px;
+  border-top: 6px solid rgb(0, 0, 0);
+  border-radius: 50px;
+}
+
+button{
+  margin: 2px;
+  padding: 8px;
+  border-radius: 15px;
+  border: 2px solid white;
+  color: aliceblue;
+  transition: 0.5s;
+  font-weight: 700;
+  font-size: .8rem;
+  width: 60px;
+  opacity: 60%;
+}
+
+button:hover{
+  transform: scale(1.2);
+  color: black;
+  border: 2px solid rgb(0, 0, 0);
+  opacity: 80%;
+}
+
+.solveBtn{
+  background-color: rgba(0, 128, 0, 0.5);
+  margin-top: 50px;
+}
+
+.checkBtn{
+  background-color: rgba(231, 255, 12, 0.5);
+}
+
+.clearBtn{
+  background-color: rgba(255, 0, 0, 0.5);
+  margin-top: 50px;
+}
+
+.newGameBtn{
+  background-color: rgba(0, 0, 255, 0.5);
+  color: rgb(255, 255, 255); 
+}
+
+.levelMenu{
+  display: flex;
+  align-items: center;
+}
+
+.levelMenu span {
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  margin: 14px 10px 0;
+}
+
+.levelBtn{
+  color: rgb(255, 255, 255);
+  background-color: var(--accentColor);
+  width: 85px;
+  height: 30px;
+  padding: 0;
+  margin: 15px 5px 0;
 }
